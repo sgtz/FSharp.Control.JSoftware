@@ -1,10 +1,9 @@
 ﻿# Augmenting JD for JSON and Eval
 
 JD has been put together in a flexible way, and the ease of making these modifications illustrates this.  
-Particularly on the tojson stuff, well, that's already a part of JD.  I'm not
-sure why the "case.'JSON'" line isn't in the source code.
+On the tojson verb, this was already a part of JD, but the line was missing from the source code for some reason (a bug?).
 
-On Eval, well this already exists as a "foreign" verb in J.  So we are taking advantage of this in through the
+On Eval, this already exists as a "foreign" verb in J.  So we are merely taking advantage of this through the
 JD extensions mechanism.  
 
 You need to be security concious to take this approach, but extending J through a command driven rather than a completely RESTful

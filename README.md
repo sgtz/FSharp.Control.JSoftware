@@ -1,16 +1,16 @@
-J8L
-===
+FSharp.Control.JSoftware
+========================
 
-JLight is an out-of-process connector to JSoftware.com's Columnar database known as JD, or simply, J Database.
+FSharp.Control.JSoftware is an out-of-process connector to JSoftware.com's Columnar database known as JD, or simply, J Database.
 
 Send reqeust "commands" in text format.  Receive responses in JSON.
 
 
 How it works:
 
-Through the c.cs .ctor arguments, the connector will be teathere itself to: host, password, database
-If no user / password is specified the default "u/p" is assumed
-If no serialisation strategies are specified, in:TEXT and out:JSON are assumed.
+Through the c.cs .ctor arguments, the connector will be teather itself to a server process identified by: (host, password) with authorisation / identification through (database,user,password).
+If no user / password is specified then the default of "u/p" is assumed
+When no serialisation strategies are specified, in:TEXT and out:JSON are assumed.
 
 
 Important:
@@ -40,4 +40,4 @@ Misc:
 
 Licence:
 
-Appache ... 
+Appache 2.0 

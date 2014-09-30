@@ -9,22 +9,23 @@ The connector can also be used to expose J functions over http.  While this is
  not RESTful, it can be very convenient.
 
 
-Usage:
-create a new c instance and provide the desired host params. You can then execute commands with c.jd("some command").
+How to use:
 
-usage 1:
+new up a c class instance and then send off some requests with c.jd("some command"), then consume the return values.
+
+example 1:
 
 var c = c("host",65031,"sandp","u","p")  // ie. (host,port,db,usr,pwd)
 
 c.jd("reads from j")
 
-usage 2:
+example 2:
 
 var c = c("host",65031,"sandp","u","p",SvrFmt.Text,SvrFmt.JSON)
 
 c.jd("reads from j")
 
-usage 3:
+example 3:
 
 var c = c("host",65031,"sandp","u","p")
 

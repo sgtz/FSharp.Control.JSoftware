@@ -2,16 +2,21 @@ erase'projectDir'[defudir 'MyProj';projectDir[require projectDir,'/sys/j-env.ijs
 
 0 : 0
 
+benefits: 
+* make deployment of your work easier.  
+* perhaps you might end up using the JConsole 
+
+How:
+
 Make your scripts self-aware (perhaps 'contextually aware' is more apt).
 
-Drop this one line into the start of your script.  A minimal way of providing project structure.  Minimal structure and folder location independence.  
+Drop this one line into the start of your script.  This is a short way of providing project structure and folder location independence.
 
-note: myProject dir could be initialised with some OS system (see 2!:5 y / Getenv)
-
-use J verb 'load' or 'require' with the ~MyProj prefix as defined on the first line of the script.
+From there, you can define you script dependencies more flexibly through 'load' or 'require' through the UserFolder / SystemFolder syntax of '~MyProj/some/path/from/a/root/to/a/file.ijs'.  We are just achieving a convenient way of bootstrapping this feature.  
 
 Other options might include environment variables.  
 
+@TODO: myProject dir could also be initialised with some OS system variables (see 2!:5 y / Getenv)
 @TODO: shorten the script self-awareness line
 @TODO: include 2!:5 y Getenv.  
 @TODO: include an OS system variable approach here instead of semi-hard wiring folders (even if one line).

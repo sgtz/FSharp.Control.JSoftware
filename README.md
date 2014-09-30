@@ -60,8 +60,7 @@ release could be as simple as possible while still remaining useful.
 
 #Architecture
 
-You might want to migrate to a J based RESTful approach in time, or your REST layer might make those SQL / stored procedure-esque requests via the JD connector and you could leave it as is.  In this context the use case is indistinguishable from any other database -> SQL or stored procedure idiom,
-except you've got a very capable analytics language to express your ideas in.
+You might want to migrate to a J based RESTful approach in time, or your REST layer might make those SQL / stored procedure-esque requests via the JD connector and you could leave it as is.  In this context the use case is indistinguishabl from any other database SQL or stored procedure idiom, except you've got a very capable analytics language to express your ideas in.
 
 #Licence
 

@@ -1,0 +1,1 @@
+linux like environment on windows.  May need additional folders.  Initially this coveres Hamilton C-Shell

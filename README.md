@@ -47,7 +47,7 @@ This connector can also be used to expose J functions over http.
 
 #Setup
 
-To enable JSON on JD, you will need to a single lind to the ~addons\data\jd\api\jjd.ijs (see JsonAndEval.md) 
+To enable JSON on JD, you will need to insert a single line in the ~addons\data\jd\api\jjd.ijsfile (see JsonAndEval.md) 
 
 #Misc
 
@@ -60,8 +60,7 @@ release could be as simple as possible while still remaining useful.
 
 #Architecture
 
-You might want to migrate to a J based RESTful approach in the future, or your REST layer might make JD SQLesque 
-requests or hook into your connection exposed API (akin to a stored procedure).  In this context the use case is indistinguishable from any other database -> SQL or stored procedure idiom,
+You might want to migrate to a J based RESTful approach in time, or your REST layer might make those SQL / stored procedure-esque requests via the JD connector and you could leave it as is.  In this context the use case is indistinguishable from any other database -> SQL or stored procedure idiom,
 except you've got a very capable analytics language to express your ideas in.
 
 #Licence

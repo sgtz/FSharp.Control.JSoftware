@@ -1,12 +1,11 @@
 FSharp.Control.JSoftware
 ========================
 
-FSharp.Control.JSoftware is an out-of-process connector to JSoftware.com's columnar database known as JD, or simply, J Database.
+FSharp.Control.JSoftware is an out-of-process connector to JSoftware.com's columnar database known as JD, or simply, J Database (see jsoftware.com).
 
-Send request "commands" in text format.  Receive responses in JSON.
+Send sql-esque requests in text format.  Receive responses in JSON.
 
-The connector can also be used to expose J functions over http.  While this is
- not RESTful, it can be very convenient.
+The connector can also be used to expose J functions over http.  While this is not RESTful, it can be very convenient.
 
 
 How to use:
@@ -17,26 +16,26 @@ example 1:
 
 var c = c("host",65031,"sandp","u","p")  // ie. (host,port,db,usr,pwd)
 
-c.jd("reads from j")
+var r = c.jd("reads from j")
 
 example 2:
 
 var c = c("host",65031,"sandp","u","p",SvrFmt.Text,SvrFmt.JSON)
 
-c.jd("reads from j")
+var r = c.jd("reads from j")
 
 example 3:
 
 var c = c("host",65031,"sandp","u","p")
 
-c.jd("reads from j",SvrFmt.Text,SvrFmt.JSON)   // a per command serialisation strategy.
+var r = c.jd("reads from j",SvrFmt.Text,SvrFmt.JSON)   // a per command serialisation strategy.
 
 
 Shorthand:
 
-CxInfo -- place connection info in here and ctor
+CxInfo --  connection info in here and ctor
 
-SerInfo -- serialisation strategy.  See fin / fout in JD documentation
+SerInfo -- serialisation strategy choices (fin,fout) where f stands for format.
 
 
 Defaults:

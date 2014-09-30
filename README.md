@@ -8,35 +8,31 @@ Send reqeust "commands" in text format.  Receive responses in JSON.
 
 How it works:
 
-Through the c.cs .ctor arguments, the connector will be teather itself to a server process identified by: (host, password) with authorisation / identification through (database,user,password).
+create a new c instance (c.cs) and provide the desired host parameters. Now you can execute commands with c.jd("some command").
+
 If no user / password is specified then the default of "u/p" is assumed
 When no serialisation strategies are specified, in:TEXT and out:JSON are assumed.
 
 
-Important:
+Notes:
 
-only TEXT/JSON is supported currently
+only TEXT/TEXT and TEXT/JSON are currently supported.  Also, you will need to add one line to a script in the ~addons/data/jd folder to enable JSON
 
-JBIN was working, but those were ripped out with the aim that the first public C# http API 
-that I publish should be as simple as possible.
+JBIN was working, but these elements were ripped out with the aim that the first 
+release should be as simple as possible.
 
 Alternative uses:
 
-* the connector can also be used to expose J functions over http.  
-  
-  While this is not a RESTful technique, it can be useful.
+* the connector can also be used to expose J functions over http.  While this is not a RESTful technique, it can be very useful.
 
 
 TODO:
-
-* describe how to setup a JD database so that it can expose arbitrary functions 
 
 * implement the JBinary format
 
 Misc:
 
-* the c.cs might be converted to F# in future.  Even so, extensions using this connector will be built in F#.  This is 
-  the current rationale for have FSharp.Control.JSoftware as the namespace.
+* the c.cs will likely be converted to F# in future.  Even so, extensions using this connector will be done in F#.  So that's why FSharp.Control.JSoftware was used as a namespace.
 
 Licence:
 

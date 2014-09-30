@@ -3,8 +3,9 @@ erase'projectDir'[defudir 'MyProj';projectDir[require projectDir,'/sys/j-env.ijs
 0 : 0
 
 benefits: 
+* reference libraries from any projects.  Useful in some multi-project solutions.
 * make deployment of your work easier.  
-* perhaps you might end up using the JConsole 
+* start JConsole without relying on some IDE start-up sequence
 
 How:
 

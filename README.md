@@ -1,6 +1,8 @@
 #FSharp.Control.JSoftware
 
-FSharp.Control.JSoftware is an out-of-process connector to JSoftware.com's columnar JD database (see jsoftware.com).  Send a text SQL-esque requests and receive a JSON response.
+Text a JD SQL-esque request and receive a JSON response.
+
+FSharp.Control.JSoftware is an out-of-process connector to JSoftware.com's columnar JD database (see jsoftware.com).  
 
 This connector can also be used to expose J functions over http.
 

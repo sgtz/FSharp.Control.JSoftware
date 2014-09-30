@@ -10,10 +10,13 @@ namespace FSharp.Control.JSoftware
     /// connector teathers to a host with a user, password, and database
     /// If no user / password specified the default "u/p" is assumed
     /// If no serialisation method is specified, (in:TEXT, out:JSON) is assumed.
-    /// NB. only TEXT/JSON is supported currently (see modification to the JD script needed for JSON support above)
-    /// NB. an earlier version of this connector hacked in JBIN support through a COM / J6 / client-side com 
+    /// NB. only TEXT/JSON is currently supported (see modification to the JD script needed for JSON support above)
+    /// NB. an earlier version of this connector hacked in JBIN support through a COM / J6 / client-side COM
     ///     technique, but that code was removed so that there were a minimal number of dependencies.
-    ///     @TODO: add JBIN support 
+    ///     @TODO: add JBIN support natively.  ie. unravel the JBIN structure directly in .Net, or
+    ///            through pinvoke.  The COM wrapper worked fine, but COM support has an unkown future,
+    ///            and also is a windows only solution.
+    /// 
     /// </summary>
     public class c
     {

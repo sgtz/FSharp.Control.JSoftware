@@ -61,6 +61,24 @@ namespace FSharp.Control.JSoftware
             return jd(s, new SerInfo(SvrFmt.Text,fout));
         }
 
+        /// <summary>
+        /// eval
+        /// </summary>
+        public object j(string s)
+        {
+            return jd("eval " + s);
+        }
+
+        public object j(string s, SvrFmt fin, SvrFmt fout)
+        {
+            return jd("eval " + s, fin, fout);
+        }
+
+        public object j(string s, SvrFmt fout)
+        {
+            return jd("eval " + s, fout);
+        }
+
         public CxInfo CxInfo
         {
             get

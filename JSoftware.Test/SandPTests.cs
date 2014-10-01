@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FSharp.Control.JSoftware.Test
 {
@@ -13,27 +14,29 @@ namespace FSharp.Control.JSoftware.Test
 
         [TestMethod]
         public void CanEval(){
-            // NB. eval only works if you've enabled this on your server
-            // NB. @TODO: document how to do this
             var x = c.jd("eval 5+5");
+            Console.WriteLine(x);
         }
+
+        [TestMethod]
+        public void CanEval2()
+        {
+            var x = c.j("5+5");
+            Console.WriteLine(x);
+        }
+
 
         [TestMethod]
         public void CanEval02()
         {
-            // NB. eval only works if you've enabled it on your server
-            // NB. @TODO: document how to do this
             var x = c.jd("eval 101+202", SvrFmt.Text);
             var s = (string) x;
-            Assert.AreEqual("303",s);
-
-            // @TODO: why is the evaluated data comming back as having \n after each character?
+            Assert.AreEqual("303",s);  
         }
         
         [TestMethod]
         public void CanSelect(){
             var s = c.jd("read from j", SvrFmt.Text, SvrFmt.JSON);
-            // USE READS
         }
         [TestMethod]
         public void CanSelect02(){
@@ -51,3 +54,4 @@ namespace FSharp.Control.JSoftware.Test
 
     }
 }
+// @TODO: will nuget break a travis build?

@@ -20,23 +20,6 @@ namespace FSharp.Control.JSoftware.Test
             }
             return true;
         }
-
-        //private ASCIIEncoding _ascii = new ASCIIEncoding();
-        //[TestMethod]
-        //public void GetBytesTechniquesAreEquivilent()
-        //{
-        //    var a = z.GetBytes("abcdef");
-        //    var b = _ascii.GetBytes("abcdef");
-        //    Assert.AreEqual(true, Eq(a,b));
-        //}
-        //[TestMethod]
-        //public void GetStringTechniquesAreEquivilent()
-        //{
-        //    var x = z.GetBytes("abcdef");
-        //    var a = _ascii.GetString(x);
-        //    var b = z.GetString(x);
-        //    Assert.AreEqual(true, a==b);
-        //}
     
     }
 }

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSharp.Control.JSoftware", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FSharp.Control.JSoftware.Test", "JSoftware.Test\FSharp.Control.JSoftware.Test.csproj", "{B6BFAED9-0D04-4CBA-9D8B-5EB9A60AD2F7}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.Control.JSoftware.TestFS", "JSoftware.TestFS\FSharp.Control.JSoftware.TestFS.fsproj", "{6EB3E234-F2B4-457B-AD0C-935D3374B383}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,12 @@ Global
 		{B6BFAED9-0D04-4CBA-9D8B-5EB9A60AD2F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6BFAED9-0D04-4CBA-9D8B-5EB9A60AD2F7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B6BFAED9-0D04-4CBA-9D8B-5EB9A60AD2F7}.Release|x86.ActiveCfg = Release|Any CPU
+		{6EB3E234-F2B4-457B-AD0C-935D3374B383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB3E234-F2B4-457B-AD0C-935D3374B383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB3E234-F2B4-457B-AD0C-935D3374B383}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6EB3E234-F2B4-457B-AD0C-935D3374B383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB3E234-F2B4-457B-AD0C-935D3374B383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EB3E234-F2B4-457B-AD0C-935D3374B383}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

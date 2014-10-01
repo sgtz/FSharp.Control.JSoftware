@@ -20,8 +20,6 @@ namespace FSharp.Control.JSoftware
     /// </summary>
     public class c
     {
-        // @TODO: is there a way to add references to GitHub projects dynamically from other solutions?  ie. if using the User folder default, then the location will differ between machines
-
         // @TODO: change return data to a stream
 
         private readonly CxInfo _cxInfo;
@@ -152,6 +150,9 @@ namespace FSharp.Control.JSoftware
     [System.Diagnostics.DebuggerDisplay("{DiagInfo,nq}")]
     public class CxInfo
     {
+        private const string cDefHost = "localhost";
+        private const string cDefUser = "u";
+        private const string cDefPwd = "p";
 
         public CxInfo()
         {
@@ -168,11 +169,11 @@ namespace FSharp.Control.JSoftware
         }
 
         public CxInfo(string host, int port, string db)
-            : this(host, port, db, "u", "p")
+            : this(host, port, db, cDefUser, cDefUser)
         { }
 
         public CxInfo(string host, int port)
-            : this(host, port, "", "u", "p")
+            : this(host, port, "", cDefUser, cDefUser)
         {
         }
 
@@ -187,7 +188,7 @@ namespace FSharp.Control.JSoftware
 
         private string HostDefault(string host)
         {
-            var s=String.IsNullOrWhiteSpace(host) ? "127.0.0.1" : host;   // NB. 127.0.0.1 is localhost
+            var s=String.IsNullOrWhiteSpace(host) ? cDefHost : host;   // NB. 127.0.0.1 is localhost
             if (!s.StartsWith("http"))
             {
                 if (Ssl)

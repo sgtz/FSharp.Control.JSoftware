@@ -20,6 +20,7 @@ namespace FSharp.Control.JSoftware
     /// </summary>
     public class c
     {
+        // @TODO: is there a way to add references to GitHub projects dynamically from other solutions?  ie. if using the User folder default, then the location will differ between machines
 
         // @TODO: change return data to a stream
 

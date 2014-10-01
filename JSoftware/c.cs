@@ -27,8 +27,6 @@ namespace FSharp.Control.JSoftware
         private readonly ASCIIEncoding _ascii = new ASCIIEncoding();
 
         private SerInfo _serInfo = new SerInfo(SvrFmt.Text, SvrFmt.JSON);
-        private const string cDefUsr = "u";
-        private const string cDefPwd = "p";
 
         public c(string h, int p, string db, string usr, string pwd)
             : this(new CxInfo(h, p, db, usr, pwd), null)
@@ -38,7 +36,7 @@ namespace FSharp.Control.JSoftware
         {}
 
         public c(string h, int p, string db)
-            : this(h, p, db, cDefUsr, cDefPwd)
+            : this(h, p, db, CxInfo.cDefUser, CxInfo.cDefPwd)
         {}
 
         public c(CxInfo cxInfo, SerInfo serInfo)
@@ -150,9 +148,9 @@ namespace FSharp.Control.JSoftware
     [System.Diagnostics.DebuggerDisplay("{DiagInfo,nq}")]
     public class CxInfo
     {
-        private const string cDefHost = "localhost";
-        private const string cDefUser = "u";
-        private const string cDefPwd = "p";
+        internal const string cDefHost = "localhost";
+        internal const string cDefUser = "u";
+        internal const string cDefPwd = "p";
 
         public CxInfo()
         {
